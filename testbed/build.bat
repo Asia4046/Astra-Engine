@@ -14,7 +14,7 @@ SET assembly=testbed
 SET compilerFlags=-g
 REM
 SET includeFlags=-Isrc -I../engine/src/
-SET linkerFlags=-L../bin/ -lengine.lib 
+SET linkerFlags=-L../Windows/bin/ -lengine.lib 
 SET defines=-D_DEBUG -DKIMPORT
 
 ECHO "BUILDING [%assembly%]..."
