@@ -15,7 +15,24 @@
     "editor.tabCompletion": "on",
     "workbench.colorCustomizations": {
         "editorCursor.foreground": "#f3f3f3b6",
-        "editor.lineHighlightBackground": "#313150"
+        "editor.lineHighlightBackground": "#313150",
+        "activityBar.activeBackground": "#ffe6e8",
+        "activityBar.background": "#ffe6e8",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#0fbf00",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#ffe6e8",
+        "statusBar.background": "#ffb3ba",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#ff808c",
+        "statusBarItem.remoteBackground": "#ffb3ba",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#ffb3ba",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#ffb3ba99",
+        "titleBar.inactiveForeground": "#15202b99"
     },
     "todohighlight.isEnable": true,  
     "todohighlight.keywords": [
@@ -106,4 +123,5 @@
         "transform.h": "c",
         "windows.h": "c"
     },
+    "peacock.remoteColor": "#ffb3ba",
 }
