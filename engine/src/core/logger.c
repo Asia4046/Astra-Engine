@@ -1,6 +1,6 @@
 // LOCAL HEADERS
 #include "logger.h"
-#include "assert.h"
+#include "asserts.h"
 
 // GLOBAL HEADERS
 #include <stdio.h>
