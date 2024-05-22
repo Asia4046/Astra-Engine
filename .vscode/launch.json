@@ -16,10 +16,10 @@
         "name": "(Linux) Launch",
         "type": "cppdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/bin/testbed",
+        "program": "${workspaceFolder}/Linux/bin/testbed",
         "args": [],
         "stopAtEntry": false,
-        "cwd": "${workspaceFolder}/bin/",
+        "cwd": "${workspaceFolder}/Linux/bin/",
         "environment": [],
     }
 ]
