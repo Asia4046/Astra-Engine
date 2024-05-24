@@ -123,6 +123,10 @@ char* get_memory_usage_str()
         offset += length;
     }
 
+    #if KPLATFORM_WINDOWS
+    char* out_string = _strdup(buffer);
+    #else
     char* out_string = strdup(buffer);
+    #endif
     return out_string;
 }
