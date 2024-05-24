@@ -17,6 +17,7 @@
         "editorCursor.foreground": "#f3f3f3b6",
         "editor.lineHighlightBackground": "#313150"
     },
+    "editor.cursorStyle": "block",
     "todohighlight.isEnable": true,  
     "todohighlight.keywords": [
         {
