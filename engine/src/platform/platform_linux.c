@@ -145,9 +145,20 @@ b8 platform_startup(
 }
 
 void platform_shutdown(platform_state* plat_state) {
+    internal_state *state = (internal_state *)plat_state->internal_state;
+
+    XAutoRepeatOn(state->display);
+
+    xcb_destroy_window(state->connection, state->window);
 }
 
 b8 platform_pump_messages(platform_state* plat_state) {
+     internal_state *state = (internal_state *)plat_state->internal_state;
+
+     xcb_generic_event_t *event;
+     xcb_client_message_event_t *cm;
+
+     b8 quit_flagged = False;
 }
 
 void* platform_allocate(u64 size, b8 aligned) {

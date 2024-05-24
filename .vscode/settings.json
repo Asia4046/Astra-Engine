@@ -106,6 +106,8 @@
         "renderer_types.h": "c",
         "transform.h": "c",
         "windows.h": "c",
-        "asserts.h": "c"
+        "asserts.h": "c",
+        "xcb.h": "c",
+        "xlib.h": "c"
     },
 }
