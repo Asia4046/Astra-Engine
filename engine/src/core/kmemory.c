@@ -39,6 +39,9 @@ void initialize_memory()
     platform_zero_memory(&stats, sizeof(stats));
 }
 
+void shutdown_memory() {
+}
+
 void* kallocate(u64 size, memory_tag tag)
 {
     if(tag == MEMORY_TAG_UNKNOWN)
@@ -81,7 +84,7 @@ KAPI void* kset_memory(void* dest, i32 value, u64 size)
     return platform_set_memory(dest, value, size);
 }
 
-char* get_memory_usage()
+char* get_memory_usage_str()
 {
     const u64 gib = 1024 * 1024 * 1024;
     const u64 mib = 1024 * 1204;
@@ -115,5 +118,11 @@ char* get_memory_usage()
             unit[1] = 0;
             amount = (float)stats.tagged_allocations[i];
         }
+
+        i32 length = snprintf(buffer + offset, 8000, "  %s: %.2f%s\n", memory_tag_strings[i], amount, unit);
+        offset += length;
     }
+
+    char* out_string = strdup(buffer);
+    return out_string;
 }
