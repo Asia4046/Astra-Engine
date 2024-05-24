@@ -1,21 +1,20 @@
-#include <core/logger.h>
-#include <core/asserts.h>
+#include <entry.h>
+#include "game.h"
 #include <platform/platform.h>
-#include "defines.h"
-#include <core/application.h>
 
-int main(void){
+b8 create_game(game* out_game)
+{
+    out_game->app_config.start_pos_x = 100;
+    out_game->app_config.start_pos_y = 100;
+    out_game->app_config.start_width = 1280;
+    out_game->app_config.start_height = 720;
+    out_game->app_config.name = "ASTRA ENGINE TESTBED";
+    out_game->update = game_update;
+    out_game->render = game_render;
+    out_game->initialize = game_initialize;
+    out_game->on_resize = game_on_resize;
 
-    application_config config;
-    config.start_pos_x = 100;
-    config.start_pos_y = 100;
-    config.start_width = 1280;
-    config.start_height = 720;
-    config.name = "ASTRA ENGINE TESTBED";
+    out_game->state = platform_allocate(sizeof(game_state), false);
 
-    application_create(&config);
-
-    application_run();
-
-    return 0;
+    return true;
 }
