@@ -23,7 +23,8 @@ fi
 
 echo "ALL ASSEMBLIES BUILT SUCCESSFULLY."
 
-version=0.0.1-dev
+version=0.0.1-dev-alpha
 
 echo "Compressing Source Code and Build"
+rm *.tar.gz
 tar -zcvf build_and_source_$version.tar.gz *
