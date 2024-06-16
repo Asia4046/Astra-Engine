@@ -12,7 +12,7 @@ enum {
 };
 
 KAPI void* _darray_create(u64 length, u64 stride);
-KAPI void* _darray_destroy(void* array);
+KAPI void _darray_destroy(void* array);
 
 KAPI u64 _darray_field_get(void* array, u64 field);
 KAPI void _darray_field_set(void* array, u64 field, u64 value);
