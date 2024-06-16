@@ -1,5 +1,5 @@
 #include "containers/darray.h"
-#include "kmemory.h"
+#include "core/kmemory.h"
 
 void* _darray_create(u64 length, u64 stride){
     u64 header_size = DARRAY_FIELD_LENGTH * sizeof(u64);
@@ -24,7 +24,7 @@ u64 _darray_field_get(void* array, u64 field){
     return header[field];
 }
 
-u64 _darray_field_set(void* array, u64 field, u64 value){
+void _darray_field_set(void* array, u64 field, u64 value){
     u64* header = (u64*)array - DARRAY_FIELD_LENGTH;
     header[field]= value;
 }
@@ -40,4 +40,21 @@ void* _darray_resize(void* array){
     _darray_field_set(temp, DARRAY_LENGTH, length);
     _darray_destroy(array);
     return temp;
+}
+
+void* _darray_push(void* array, const void* value_ptr){
+
+    u64 length = darray_length(array);
+    u64 stride = darray_stride(array);
+    if(length >= darray_capacity(array))
+    {
+        array = _darray_resize(array);
+    }
+
+    u64 addr = (u64)array;
+    addr += (length * stride);
+    kcopy_memory((void*)addr, value_ptr, stride);
+    _darray_field_set(array, DARRAY_LENGTH, length + 1);
+    return array;
+
 }
