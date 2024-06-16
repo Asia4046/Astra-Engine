@@ -14,7 +14,7 @@ typedef struct application_config {
 
 
     i16 start_width;
-
+ 
     
     i16 start_height;
 

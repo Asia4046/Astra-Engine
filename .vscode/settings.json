@@ -5,6 +5,8 @@
     "workbench.editor.showTabs": "multiple",
     "workbench.statusBar.visible": true,
     "editor.lineNumbers": "on",
+    "editor.fontFamily": "Fira Code", 
+    "editor.fontLigatures": true,
     "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0, NamespaceIndentation: All}",
     "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
     "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
